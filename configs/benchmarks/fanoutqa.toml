@@ -1,0 +1,3 @@
+[benchmark]
+official_dev = "upstream/fanoutqa/fanout-final-dev-nov23.json"
+retrieval_dataset = "upstream/fanoutqa-retrieval"

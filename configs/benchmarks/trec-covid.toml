@@ -1,0 +1,3 @@
+[benchmark]
+raw_root = "upstream/beir/trec-covid"
+split = "test"

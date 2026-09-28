@@ -1,0 +1,74 @@
+# Full reconstruction runbook. Copy outside the repository and replace paths,
+# model IDs, and compatible endpoints. Paths are relative to this file.
+
+[paths]
+corpus_input = "upstream/documents.jsonl"
+corpus = "work/corpus"
+fulltext_index = "work/fulltext.sqlite3"
+document_embeddings = "work/document_embeddings"
+atlas = "work/atlas"
+dataset = "upstream/questions.jsonl"
+query_embeddings = "work/query_embeddings"
+router_tasks = "work/router/tasks"
+router_questions = "work/router/questions"
+router_query_embeddings = "work/router/query_embeddings"
+router_arrays = "work/router/arrays"
+router_model = "work/router/model/router_model.npz"
+runtime = "work/runtime"
+state = "work/state"
+agent_profile = "../../configs/paper/deepseek-v4-flash.toml"
+judge_profile = "../../configs/paper/deepseek-v4-flash.toml"
+qrels = "frozen/evidence_span_qrels.jsonl"
+runs = "runs/atlasnav"
+judgments = "runs/judge"
+evaluation = "runs/evaluation"
+markdown_report = "runs/report.md"
+
+[embedding]
+base_url = "https://YOUR_EMBEDDING_ENDPOINT/v1"
+api_key_env = "ATLASNAV_EMBEDDING_API_KEY"
+model = "qwen3.7-text-embedding"
+dimensions = 2560
+batch_size = 20
+concurrency = 30
+ramp_start = 2
+ramp_seconds = 180.0
+timeout = 180.0
+maximum_retries = 12
+
+[atlas]
+pca_dimensions = 192
+pca_training_rows = 50000
+neighbors = 48
+parent_workers = 1
+child_workers = 1
+
+[router]
+candidate_tasks = 30000
+candidate_per_leaf = 72
+single_fraction = 0.25
+pair_fraction = 0.50
+seed = 41200
+synthesis_base_url = "https://YOUR_CHAT_ENDPOINT/v1"
+synthesis_api_key_env = "ATLASNAV_SYNTHESIS_API_KEY"
+synthesis_model = "YOUR_SYNTHESIS_MODEL"
+synthesis_concurrency = 20
+synthesis_batch_size = 3
+synthesis_maximum_retries = 8
+candidates_per_query = 257
+maxiter = 100
+
+[runtime]
+initial_parents = 10
+anchors_per_parent = 3
+
+[execution]
+agent_concurrency = 20
+agent_ramp_start = 2
+agent_ramp_seconds = 120.0
+judge_concurrency = 30
+judge_ramp_start = 5
+judge_ramp_seconds = 60.0
+tool_timeout = 30.0
+turn_checkpoints = [15, 30, 60, 120, 300]
+cost_checkpoints = [0.15, 0.40, 1.20, 2.75]

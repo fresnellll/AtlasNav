@@ -1,0 +1,4 @@
+[benchmark]
+raw_root = "upstream/enterpriserag/data"
+expected_documents = 511962
+expected_questions = 500

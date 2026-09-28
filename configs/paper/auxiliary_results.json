@@ -1,0 +1,32 @@
+{
+  "schema": "atlasnav_paper_auxiliary_results_v2",
+  "phantomwiki_accuracy_percent": {
+    "10k": {"dci": 70.0, "drdci": 41.5, "atlasnav": 76.5},
+    "50k": {"dci": 72.5, "drdci": 45.5, "atlasnav": 77.5},
+    "100k": {"dci": 70.0, "drdci": 45.0, "atlasnav": 76.0},
+    "1m": {"dci": 58.5, "drdci": 37.0, "atlasnav": 61.0}
+  },
+  "2wiki_global400": {
+    "raw-dci": {"accuracy_percent": 95.50, "query_time_agent_inference_cost_cny": 22.59, "operating_cost_cny": 22.59, "turns": 4117},
+    "dr-dci": {"accuracy_percent": 94.50, "query_time_agent_inference_cost_cny": 28.01, "operating_cost_cny": 28.04, "turns": 5540},
+    "atlasnav": {"accuracy_percent": 94.50, "query_time_agent_inference_cost_cny": 10.89, "operating_cost_cny": 10.89, "turns": 3135}
+  },
+  "fanoutqa": {
+    "raw-dci": {"loose_percent": 79.65, "strict_percent": 39.35, "query_time_agent_inference_cost_cny": 73.35, "operating_cost_cny": 73.35, "turns": 6596},
+    "dr-dci": {"loose_percent": 81.42, "strict_percent": 44.19, "query_time_agent_inference_cost_cny": 43.23, "operating_cost_cny": 43.24, "turns": 6493},
+    "atlasnav": {"loose_percent": 80.10, "strict_percent": 40.32, "query_time_agent_inference_cost_cny": 36.49, "operating_cost_cny": 36.49, "turns": 4218}
+  },
+  "trec_covid": {
+    "Raw DCI": {"ndcg_at_10": 0.5958},
+    "DR-DCI": {"ndcg_at_10": 0.7459, "query_time_agent_inference_cost_cny": 4.67, "operating_cost_cny": 4.68},
+    "AtlasNav": {"ndcg_at_10": 0.8314, "query_time_agent_inference_cost_cny": 17.21, "operating_cost_cny": 17.22},
+    "Positive-pool Oracle": {"ndcg_at_10": 0.9316}
+  },
+  "enterpriserag": {
+    "overall": 87.00,
+    "correctness_percent": 94.40,
+    "completeness_percent": 89.14,
+    "document_recall_percent": 87.05,
+    "invalid_extra_documents": 0.66
+  }
+}

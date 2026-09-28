@@ -1,0 +1,23 @@
+[profile]
+id = "qwen-3.7-flash"
+model_id = "qwen3.7-flash"
+transport = "openai_chat"
+base_url_env = "ATLASNAV_AGENT_BASE_URL"
+api_key_env = "ATLASNAV_AGENT_API_KEY"
+context_window = 131072
+reasoning_effort = "high"
+
+[pricing]
+currency = "CNY"
+input_per_million = 0.2
+cached_input_per_million = 0.04
+cache_creation_per_million = 0.25
+output_per_million = 0.8
+
+[safe_release]
+enabled = true
+cost_threshold = 1.95
+max_turns = 300
+fallback_turn = 295
+allow_tools = false
+

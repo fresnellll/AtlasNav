@@ -1,0 +1,4 @@
+[benchmark]
+source = "upstream/2wiki/dev.parquet"
+questions_per_type = 100
+seed = "atlasnav-2wiki-global-v1"

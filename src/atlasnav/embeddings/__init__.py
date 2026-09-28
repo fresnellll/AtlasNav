@@ -1,0 +1,2 @@
+"""Provider-neutral embedding transport."""
+

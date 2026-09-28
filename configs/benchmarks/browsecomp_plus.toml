@@ -1,0 +1,37 @@
+[benchmark]
+id = "browsecomp_plus"
+questions = 830
+documents = 100195
+query_id_field = "query_id"
+query_field = "query"
+answer_field = "answer"
+document_id_field = "docid"
+document_text_field = "text"
+
+[atlas]
+views = ["topic", "identity", "episode", "relation"]
+embedding_model = "qwen3.7-text-embedding"
+embedding_dimensions = 2560
+projection_dimensions = 192
+projection_fit_documents = 50000
+neighbors = 48
+hnsw_m = 32
+ef_construction = 160
+ef_search = 128
+parent_view_weights = [1.0, 0.75]
+initial_parents = 10
+anchors_per_parent = 3
+rrf_k = 60
+
+[router]
+features = 816
+parameters = 4902
+final_tasks = 7163
+train_tasks = 4972
+validation_tasks = 1167
+test_tasks = 1024
+semantic_floor = 0.05
+
+[evaluation]
+turn_checkpoints = [15, 30, 60, 120, 300]
+

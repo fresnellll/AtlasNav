@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "atlasnav"
+version = "0.2.0.dev0"
+description = "Persistent multi-view corpus navigation for agentic search"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+dependencies = [
+  "httpx>=0.28,<1",
+  "huggingface-hub>=1.0,<2",
+  "numpy>=1.26,<3",
+  "pyarrow>=15,<24",
+  "scipy>=1.12,<2",
+  "tqdm>=4.66,<5",
+  "zstandard>=0.22,<1",
+]
+
+[project.optional-dependencies]
+build = [
+  "faiss-cpu>=1.8",
+  "igraph>=0.11,<2",
+  "leidenalg>=0.10,<1",
+  "scikit-learn>=1.4,<2",
+]
+benchmarks = [
+  "datasets>=3,<5",
+  "ftfy>=6.2,<7",
+  "pandas>=2.2,<3",
+  "spacy>=3.7,<4",
+  "tokenizers>=0.19,<1",
+]
+test = ["pytest>=8,<9", "pytest-asyncio>=0.24,<2"]
+all = [
+  "atlasnav[build,benchmarks,test]",
+]
+
+[project.scripts]
+atlasnav = "atlasnav.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/atlasnav"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"third_party" = "atlasnav/third_party"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

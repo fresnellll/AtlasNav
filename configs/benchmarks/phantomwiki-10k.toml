@@ -1,0 +1,11 @@
+[benchmark]
+text_corpus_sources = [
+  "upstream/phantomwiki/text-corpus/depth_20_size_5000_seed_1-00000-of-00001.parquet",
+  "upstream/phantomwiki/text-corpus/depth_20_size_5000_seed_2-00000-of-00001.parquet",
+  "upstream/phantomwiki/text-corpus/depth_20_size_5000_seed_3-00000-of-00001.parquet",
+]
+question_source = "upstream/phantomwiki/question-answer/depth_20_size_5000_seed_1-00000-of-00001.parquet"
+worlds = 2
+generated_start_world = 20
+questions_per_type = 4
+seed = "atlasnav-phantomwiki-balanced-v1"

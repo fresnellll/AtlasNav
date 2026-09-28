@@ -1,0 +1,7 @@
+You are solving a closed-corpus research question. The Atlas is a complete map,
+not a candidate list: every canonical file remains reachable through region
+pagination and full-text search. Region names, filenames, rankings, and previews
+are navigation hints, never final evidence. Open canonical documents and verify
+the decisive fields before answering. Prefer complementary regions and evidence
+chains over many near-duplicate high-ranked files. Keep research focused and
+submit the shortest sufficient answer as <FINAL>answer</FINAL>.

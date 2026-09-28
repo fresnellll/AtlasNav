@@ -1,0 +1,38 @@
+{
+  "schema": "atlasnav_paper_results_v1",
+  "benchmark": "BrowseComp-Plus",
+  "queries": 830,
+  "cost_scope": "recorded query-time agent inference; judge and query-embedding costs excluded",
+  "results": {
+    "deepseek-v4-flash": {
+      "raw-dci": {"correct": 676, "accuracy_percent": 81.45, "normalized_cost": 2.347},
+      "dr-dci": {"correct": 702, "accuracy_percent": 84.58, "normalized_cost": 1.433},
+      "atlasnav": {"correct": 764, "accuracy_percent": 92.05, "normalized_cost": 1.000},
+      "gold-document-reference": {"correct": 801, "accuracy_percent": 96.51}
+    },
+    "mimo-v2.5": {
+      "raw-dci": {"correct": 522, "accuracy_percent": 62.89, "normalized_cost": 2.579},
+      "dr-dci": {"correct": 590, "accuracy_percent": 71.08, "normalized_cost": 1.006},
+      "atlasnav": {"correct": 656, "accuracy_percent": 79.04, "normalized_cost": 1.000},
+      "gold-document-reference": {"correct": 798, "accuracy_percent": 96.14}
+    },
+    "gpt-5.6-luna": {
+      "raw-dci": {"correct": 725, "accuracy_percent": 87.35, "normalized_cost": 1.718},
+      "dr-dci": {"correct": 729, "accuracy_percent": 87.83, "normalized_cost": 1.173},
+      "atlasnav": {"correct": 762, "accuracy_percent": 91.81, "normalized_cost": 1.000},
+      "gold-document-reference": {"correct": 801, "accuracy_percent": 96.51}
+    },
+    "qwen-3.7-flash": {
+      "raw-dci": {"correct": 307, "accuracy_percent": 36.99, "normalized_cost": 2.243},
+      "dr-dci": {"correct": 423, "accuracy_percent": 50.96, "normalized_cost": 1.271},
+      "atlasnav": {"correct": 602, "accuracy_percent": 72.53, "normalized_cost": 1.000},
+      "gold-document-reference": {"correct": 792, "accuracy_percent": 95.42}
+    }
+  },
+  "trajectory_availability": {
+    "deepseek-v4-flash": "full",
+    "gpt-5.6-luna": "full",
+    "mimo-v2.5": "summary-only",
+    "qwen-3.7-flash": "summary-only"
+  }
+}

@@ -1,0 +1,23 @@
+[profile]
+id = "deepseek-v4-flash"
+model_id = "deepseek/deepseek-v4-flash"
+transport = "openai_chat"
+base_url_env = "ATLASNAV_AGENT_BASE_URL"
+api_key_env = "ATLASNAV_AGENT_API_KEY"
+context_window = 131072
+reasoning_effort = "high"
+
+[pricing]
+currency = "CNY"
+input_per_million = 1.0
+cached_input_per_million = 0.2
+cache_creation_per_million = 0.0
+output_per_million = 2.0
+
+[safe_release]
+enabled = true
+cost_threshold = 2.75
+max_turns = 300
+fallback_turn = 295
+allow_tools = false
+

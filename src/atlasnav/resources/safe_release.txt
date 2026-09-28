@@ -1,0 +1,4 @@
+The preregistered research budget has been reached. Safely release the task now:
+do not start new discovery. Review the evidence already visible, resolve the
+answer as well as possible, and return exactly one concise
+<FINAL>answer</FINAL>. Do not discuss the budget protocol.
